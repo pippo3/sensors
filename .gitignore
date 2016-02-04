@@ -1,0 +1,5 @@
+/.idea
+/myproject.iml
+node_modules/
+public/
+.sass-cache
