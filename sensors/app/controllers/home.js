@@ -1,9 +1,10 @@
 var express = require('express'),
-  router = express.Router();
+  router = express.Router(),
+  config = require('../../config/config');
+fs = require('fs')
 
-module.exports = function (app, config) {
+module.exports = function (app) {
   app.use('/', router);
-  console.log('Config: ',  config );
 };
 
 
@@ -13,10 +14,17 @@ router.get('/', function (req, res, next) {
 });
 
 router.get('/getCurrentTemperatur', function (req, res, next) {
-	var response = {
-		temperatur: 2231
-	}
-	res.json(response);
+  var response ={};
+  fs.readFile(config.data.pathTow1_slave + '' + config.device.serial + '' + config.data.w1_slaveFilename, 'utf8', function (err,data) {
+    if (err) {
+      return console.log(err);
+    }
+    response = {
+      temperatur: data.match(/(?:\d*\.)?\d{4,5}/)[0]
+    }
+    res.json(response);
+  });
+
 });
 
 router.get('/getLedStatus', function (req, res, next) {
