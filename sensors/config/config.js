@@ -15,7 +15,7 @@ var config = {
     device:{
       serial: ''
     },
-    port: 3000,
+    port: 3000
   },
 
   test: {
@@ -23,7 +23,7 @@ var config = {
     app: {
       name: 'myproject'
     },
-    port: 3000,
+    port: 3000
   },
 
   production: {
@@ -32,13 +32,13 @@ var config = {
       name: 'myproject'
     },
     data:{
-      pathTow1_slave: rootPath + '/sys/bus/w1/devices',
+      pathTow1_slave: '/sys/bus/w1/devices',
       w1_slaveFilename: 'w1_slave'
     },
     device:{
-      serial: '00000000'
+      serial: '28-000007359ec3'
     },
-    port: 3000,
+    port: 3000
   }
 };
 
