@@ -8,11 +8,18 @@
  *
  * Main module of the application.
  */
+
+angular.module('app.config', []);
+angular.module('app.services', []);
+
 angular
   .module('sensorsClientApp', [
     'ngAnimate',
     'ui.router',
-    'ngSanitize'
+    'ngSanitize',
+    'frapontillo.gage',
+    'app.config',
+    'app.services'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     // For any unmatched url, redirect to /state1
@@ -23,5 +30,5 @@ angular
         url: "/",
         templateUrl: "views/main.html",
         controller: "MainCtrl"
-      })
+      });
   });

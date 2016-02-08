@@ -24,10 +24,13 @@ module.exports = function(config) {
       // bower:js
       'bower_components/jquery/dist/jquery.js',
       'bower_components/angular/angular.js',
-      'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-animate/angular-animate.js',
-      'bower_components/angular-route/angular-route.js',
+      'bower_components/raphael/raphael.js',
+      'bower_components/justgage-bower/justgage.js',
+      'bower_components/angular-gage/dist/angular-gage.js',
       'bower_components/angular-sanitize/angular-sanitize.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.js',
+      'bower_components/bootstrap/dist/js/bootstrap.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       "app/scripts/**/*.js",

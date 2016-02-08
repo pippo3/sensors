@@ -42,7 +42,6 @@ router.get('/enableLed/:gpiopin', function (req, res, next) {
       });
     }
   });
-  //res.json({status: false});
 });
 
 router.get('/disableLed/:gpiopin', function (req, res, next) {
