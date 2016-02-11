@@ -1,7 +1,7 @@
 angular.module('app.config')
   .constant('urls', {
-    host: 'data/',
-    getCurrentTemperatur: 'temperatur.json'
+    host: 'http://192.168.178.30:3000/',
+    getCurrentTemperatur: 'getCurrentTemperatur'
   })
 
   .constant('gaugeconfig', {
